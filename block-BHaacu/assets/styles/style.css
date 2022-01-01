@@ -1,0 +1,563 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.banner {
+  padding: 2.5rem 0;
+  background-color: #dc3c45;
+  color: #fff;
+}
+
+.banner p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#about-us .industry-leaders .page-name {
+  font-size: 1rem;
+  color: #dc3c45;
+  font-weight: 600;
+}
+
+#about-us .industry-leaders .sec-heading {
+  font-size: 2rem;
+}
+
+#about-us .industry-leaders .article-1-2 figure img {
+  width: 100%;
+}
+
+#about-us .industry-leaders .article-1-2 .row-1-2 .description, #about-us .industry-leaders .article-1-2 .row-1-2 .sec-heading {
+  text-align: left;
+}
+
+#about-us .industry-leaders .article-2-2 .row-2-2 figure img {
+  width: 100%;
+}
+
+#about-us .industry-leaders .about-content .about-sub-heading {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#about-us .industry-leaders .about-content p {
+  font-size: 0.8rem;
+  color: #979696;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.5;
+  font-family: 'Archivo', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex, .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.justify-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.justify-ct, .center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.align-ct, .center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-dir-col, .center {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-10 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 10%;
+          flex: 0 1 10%;
+}
+
+.flex-20 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
+}
+
+.flex-30 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
+}
+
+.flex-40 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+}
+
+.flex-50 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.flex-60 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+}
+
+.flex-70 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 70%;
+          flex: 0 1 70%;
+}
+
+.flex-80 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 80%;
+          flex: 0 1 80%;
+}
+
+.flex-90 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 90%;
+          flex: 0 1 90%;
+}
+
+.flex-100 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+.flex-48 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 48%;
+          flex: 0 1 48%;
+}
+
+.flex-15 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 15%;
+          flex: 0 1 15%;
+}
+
+.none {
+  display: none;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 4rem;
+  margin: 0 auto;
+}
+
+.read-more-btn, .hero .call-btn, .quote .rqst-quote-btn {
+  display: inline-block;
+  border-radius: 1.2rem;
+  text-transform: capitalize;
+}
+
+.read-more-btn {
+  padding: 0.4rem  1.2rem;
+  margin-top: 1rem;
+  color: #dc3c45;
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: 2px solid #dc3c45;
+}
+
+.sec-heading {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 900;
+  text-align: center;
+}
+
+.description {
+  color: #979696;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.top-header {
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #fff;
+  background-color: #dc3c45;
+}
+
+.top-header span {
+  margin-right: 1rem;
+}
+
+.top-header a {
+  color: #fff;
+}
+
+.top-header .top-header-icon {
+  margin-right: 0.4rem;
+}
+
+.top-header .sm-links-top {
+  margin-right: 1rem;
+}
+
+.header {
+  background-color: #efefef;
+  height: 5rem;
+  line-height: 5rem;
+}
+
+.header .brand {
+  text-transform: uppercase;
+  color: #272727;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.header .highlight {
+  text-transform: capitalize;
+  color: #dc3c45;
+}
+
+.header .navbar ul .active, .header .navbar ul li:hover {
+  background-color: rgba(220, 60, 69, 0.7);
+}
+
+.header .navbar ul .active a, .header .navbar ul li:hover a {
+  color: #fff;
+}
+
+.header .navbar ul li {
+  margin: 0 0.2rem;
+  padding: 0 0.8rem;
+  text-transform: capitalize;
+}
+
+.header .navbar ul li a {
+  color: #272727;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.header .navbar ul li:hover > .dropdown-items {
+  display: inline-block;
+}
+
+.header .navbar ul li:hover a {
+  color: black;
+}
+
+.header .navbar ul .dropdown {
+  position: relative;
+}
+
+.header .navbar ul .dropdown a .fa-chevron-down {
+  margin-left: 0.6rem;
+}
+
+.header .navbar ul .dropdown .dropdown-items {
+  line-height: 1.5;
+  background-color: #efefef;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 7rem;
+}
+
+.header .navbar ul .dropdown .dropdown-items li {
+  padding: 0.5rem 0;
+}
+
+.hero {
+  background: url("../media/banner-1.jpg") no-repeat center center;
+  background-size: cover;
+  height: 81vh;
+  width: 98.7vw;
+}
+
+.hero .call-btn {
+  padding: 0.5rem  1.2rem;
+  margin-top: 1rem;
+  color: #fff;
+  font-size: 0.9rem;
+  background-color: #dc3c45;
+}
+
+.hero .heading {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.hero p {
+  font-weight: 600;
+  margin: 0.7rem 0 0.5rem 0;
+  text-transform: capitalize;
+}
+
+.hero .hero-content {
+  line-height: 1.2;
+  width: 50%;
+  margin-left: 3rem;
+}
+
+.services {
+  padding: 3rem 0;
+}
+
+.services .services-boxes {
+  margin: 4rem 0;
+}
+
+.services .services-boxes .box {
+  border: 1px solid #b4b3b3;
+  border-radius: 0.4rem;
+  text-align: center;
+  padding: 1.7rem;
+}
+
+.services .services-boxes .box .services-img {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.services .services-boxes .box .services-img img {
+  width: 100%;
+}
+
+.services .services-boxes .box h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+}
+
+.services .services-boxes .box p {
+  color: #979696;
+  font-size: 0.8rem;
+  margin: 1rem 0;
+}
+
+.all-solutions {
+  padding: 2rem 0;
+  height: 50vh;
+  background-color: #efefef;
+}
+
+.all-solutions .description {
+  width: 50%;
+  margin: 1.5rem 0;
+}
+
+.top-consulting {
+  padding: 4rem 0;
+}
+
+.top-consulting .col-1-2 figure {
+  width: 10%;
+}
+
+.top-consulting .col-1-2 figure img {
+  width: 100%;
+}
+
+.top-consulting .col-2-2 img {
+  width: 100%;
+}
+
+.quote {
+  background-color: #dc3c45;
+  padding: 2rem 0;
+  color: #fff;
+}
+
+.quote .quote-heading {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+
+.quote p {
+  font-size: 0.8rem;
+}
+
+.quote .rqst-quote-btn {
+  font-size: 0.9rem;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.4rem 0.8rem;
+}
+
+.industry-leader {
+  position: relative;
+  height: 60vh;
+  font-size: 0;
+  padding: 3rem 0;
+}
+
+.industry-leader article .sub-heading {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.industry-leader article p {
+  font-size: 0.9rem;
+  color: #979696;
+}
+
+.industry-leader figure {
+  position: absolute;
+  width: 35%;
+  bottom: 0;
+  right: 8%;
+}
+
+.industry-leader figure img {
+  width: 100%;
+}
+
+.clients {
+  height: 50vh;
+  background-color: #efefef;
+}
+
+.clients .sec-heading {
+  margin-bottom: 0.5rem;
+}
+
+.clients a img {
+  width: 100%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.footer {
+  padding: 3rem 0;
+  font-size: 0.9rem;
+  color: #979696;
+  background-color: #343a40;
+}
+
+.footer .footer-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer .footer-icon {
+  margin-right: 0.5rem;
+}
+
+.footer .row {
+  margin-bottom: 0.7rem;
+}
+
+.footer .col-2-4 li, .footer .col-3-4 li {
+  margin-bottom: 0.4rem;
+}
+
+.footer a {
+  color: #979696;
+}
+
+.footer .sm-links-bottom {
+  margin-right: 0.5rem;
+}
+
+.footer .footer-bottom {
+  margin-top: 2rem;
+}
+
+.footer .footer-bottom small {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.footer .footer-bottom small a {
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

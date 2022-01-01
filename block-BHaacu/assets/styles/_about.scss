@@ -1,0 +1,61 @@
+// Page: about us
+
+// section- banner
+
+.banner{
+    padding: 2.5rem 0;
+    background-color: $primary-clr;
+    color: #fff;
+    p{
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+
+// section industry leaders
+
+#about-us{
+    .industry-leaders{
+        .page-name{
+            font-size: 1rem;
+            color: $primary-clr;
+            font-weight: 600;
+        }
+        .sec-heading{
+            font-size: 2rem;
+        }
+        .article-1-2{
+            figure{
+                img{
+                    width: 100%;
+                }
+            }
+            .row-1-2{
+                .description, .sec-heading{
+                    text-align: left;
+                }
+            }
+        }
+        .article-2-2{
+            .row-2-2{
+                figure{
+                    img{
+                        width: 100%;
+                    }
+                } 
+            }
+        }
+        .about-content{
+            .about-sub-heading{
+                font-size: 1rem;
+                font-weight: 600;
+            }
+            p{
+                font-size: 0.8rem;
+                color: #979696;
+            }
+        }
+
+    }
+} 
