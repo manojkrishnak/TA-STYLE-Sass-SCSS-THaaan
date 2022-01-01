@@ -1,0 +1,412 @@
+$primary-clr: #dc3c45;
+
+
+@import "reset";
+@import "about";
+
+
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    line-height: 1.5;
+    font-family: 'Archivo', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-sb{
+    justify-content: space-between;
+}
+
+.justify-ct{
+    justify-content: center;
+}
+
+.align-ct{
+    align-items: center;
+}
+
+.flex-dir-col{
+    flex-direction: column;
+}
+
+.center{
+    @extend .flex, .flex-dir-col, .justify-ct, .align-ct;
+}
+
+//-----------------------------
+//flex classes
+
+@for $flex-width from 1 through 10 {
+    .flex-#{$flex-width * 10}{
+        flex: 0 1 #{$flex-width * 10%};
+    }
+}
+
+.flex-48{
+    flex: 0 1 48%;
+}
+
+.flex-15{
+    flex: 0 1 15%;
+}
+//-----------------------------
+
+.none{
+    display: none;
+}
+
+.border{
+    border: 1px solid red;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 4rem;
+    margin: 0 auto;
+}
+
+
+//-----------------------------
+//btn template
+
+%btn{
+    display: inline-block;
+    border-radius: 1.2rem;
+    text-transform: capitalize;
+}
+
+// read-more btn
+.read-more-btn{
+    @extend %btn;
+    padding: 0.4rem  1.2rem;
+    margin-top: 1rem;
+    color: $primary-clr;
+    font-size: 0.9rem;
+    background-color: transparent;
+    border: 2px solid $primary-clr;
+}
+
+// .sec-heading
+.sec-heading{
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 900;
+    text-align: center;
+}
+
+// .description
+.description{
+    color: #979696;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+//-----------------------------
+
+// top-header
+.top-header{
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: #fff;
+    background-color: $primary-clr;
+    span{
+        margin-right: 1rem;
+    }
+    a{
+        color: #fff;
+    }
+    .top-header-icon{
+        margin-right: 0.4rem;
+    }
+    .sm-links-top{
+        margin-right: 1rem;
+    }
+}
+
+// header
+.header{
+    background-color:  #efefef;
+    height: 5rem;
+    line-height: 5rem;
+    .brand{
+        text-transform: uppercase;
+        color: #272727;
+        font-size: 1.7rem;
+        font-weight: 900;
+    }
+    .highlight{
+        text-transform: capitalize;
+        color: $primary-clr;
+    }
+    .navbar{
+        ul{
+            .active{
+                background-color: rgba($primary-clr, 0.7);
+                a{
+                    color: #fff;
+                }
+            }
+            li{
+                margin: 0 0.2rem;
+                padding: 0 0.8rem;
+                text-transform: capitalize;
+                a{
+                    color: #272727;
+                    font-size: 0.9rem;
+                    font-weight: 700;
+                }
+                &:hover > .dropdown-items{
+                    display: inline-block;
+                }
+                &:hover{
+                    @extend .active;
+                    a{
+                        color: black;
+                    }
+                }
+            }
+            .dropdown{
+                position: relative;
+                a{
+                    .fa-chevron-down{
+                        margin-left: 0.6rem;
+                    }
+                }
+                .dropdown-items{
+                    line-height: 1.5;
+                    background-color:  #efefef;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    width: 7rem;
+                    li{
+                        padding: 0.5rem 0;                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+// section - hero 
+.hero{
+    background: url("../media/banner-1.jpg") no-repeat center center;
+    background-size: cover;
+    height: 81vh;
+    width: 98.7vw;
+    .call-btn{
+        @extend %btn;
+        padding: 0.5rem  1.2rem;
+        margin-top: 1rem;
+        color: #fff;
+        font-size: 0.9rem;
+        background-color: $primary-clr;
+    }
+    .heading{
+        font-size: 3rem;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    p{
+        font-weight: 600;
+        margin: 0.7rem 0 0.5rem 0;
+        text-transform: capitalize;
+    }
+    .hero-content{
+        line-height: 1.2;
+        width: 50%;
+        margin-left: 3rem;
+    }
+}
+
+//section- our services
+
+.services{
+    padding: 3rem 0;
+    .services-boxes{
+        margin: 4rem 0;
+        .box{
+            border: 1px solid #b4b3b3;
+            border-radius: 0.4rem;
+            text-align: center;
+            padding: 1.7rem;
+            .services-img{
+                width: 20%;
+                margin: 0 auto;
+                img{
+                    width: 100%;
+                }
+            }
+            h4{
+                font-size: 1.1rem;
+                font-weight: 600;
+                text-transform: capitalize;
+                margin-top: 0.5rem;
+            }
+            p{
+                color: #979696;
+                font-size: 0.8rem;
+                margin: 1rem 0;
+            }
+        }
+    }
+}
+
+
+// section- all solutions
+.all-solutions{
+    padding: 2rem 0;
+    height: 50vh;
+    background-color: #efefef;
+    .description{
+        width: 50%;
+        margin: 1.5rem 0;
+    }
+}
+
+// top consulting
+.top-consulting{
+    padding: 4rem 0;
+    .col-1-2{
+        figure{
+            width: 10%;
+        img{
+            width: 100%;
+        }
+        }
+    }
+    .col-2-2{
+            img{
+                width: 100%;
+            }
+        }
+}
+
+// section- request quote
+.quote{
+    background-color: $primary-clr;
+    padding: 2rem 0;
+    color: #fff;
+    .quote-heading{
+        font-size: 1.1rem;
+        margin-bottom: 0.7rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+    .rqst-quote-btn{
+        @extend %btn;
+        font-size: 0.9rem;    
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+
+// section- industry leader
+
+.industry-leader{
+    position: relative;
+    height: 60vh;
+    font-size: 0;
+    padding: 3rem 0;
+    article{
+        .sub-heading{
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 0.9rem;
+            color: #979696
+        }
+    }
+    figure{
+        position: absolute;
+        width: 35%;
+        bottom: 0;
+        right: 8%;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+// section- clients
+.clients{
+    height: 50vh;
+    background-color: #efefef;
+    .sec-heading{
+        margin-bottom: 0.5rem;
+    }
+    a{
+        img{
+            width: 100%;
+            filter: grayscale(100%);
+        }
+    }
+}
+
+.footer{
+    padding: 3rem 0;
+    font-size: 0.9rem;
+    color: #979696;
+    background-color: #343a40;
+    .footer-heading{
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    .footer-icon{
+        margin-right: 0.5rem;
+    }
+    .row{
+        margin-bottom: 0.7rem;
+    }
+    .col-2-4, .col-3-4{
+        li{
+            margin-bottom: 0.4rem;
+        }
+    }
+    a{
+        color: #979696;
+    }
+    .sm-links-bottom{
+        margin-right: 0.5rem;
+    }
+    .footer-bottom{
+        margin-top: 2rem;
+        small{
+            text-align: center;
+            text-transform: capitalize;
+            a{
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// -----------------------------
